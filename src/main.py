@@ -1,3 +1,6 @@
-import sqllite_bench
+import duckdb_bench
+import sqlite_bench
+import pandas_bench
 
-sqllite_bench.run()
+pandas_bench.run()
+
