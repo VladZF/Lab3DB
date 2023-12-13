@@ -1,5 +1,5 @@
-nyc_yellow_big.csv
-nyc_yellow_tiny.csv
-docker-compose.yml
-__pycache__
+*.csv
 dbs
+*.json
+__pycache__
+
