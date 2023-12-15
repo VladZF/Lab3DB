@@ -1,5 +1,2 @@
-*.csv
-dbs
-*.json
+data
 __pycache__
-

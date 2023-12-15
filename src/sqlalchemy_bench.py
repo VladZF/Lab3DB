@@ -1,5 +1,4 @@
-import pandas as pd
-import sqlalchemy
+from sqlalchemy import create_engine, text
 from time import perf_counter 
 from config import *
 import locale
@@ -7,30 +6,28 @@ locale.setlocale(locale.LC_ALL, "ru_RU")
 
 
 
-
-
 def run():
     result = open(RESULT_FILE_PATH, 'a')
-    
     url_to_db = f'postgresql://{DB_PARAMS["user"]}:{DB_PARAMS["password"]}@{DB_PARAMS["host"]}:{DB_PARAMS["port"]}/{DB_PARAMS["dbname"]}'
-    engine = sqlalchemy.create_engine(url_to_db)
-    print('Pandas test:')
+    engine = create_engine(url_to_db)
+    cursor = engine.connect()
+    print('SQLAlchemy test:')
+    result.write('SQLAlchemy test:\n')
     
-    result.write('Pandas test:\n')
     for query in QUERIES:
         average_time = 0
         for _ in range(ATTEMPT_COUNT):
             start = perf_counter()
-            pd.read_sql(query, con=engine)
+            cursor.execute(text(query))
             finish = perf_counter()
             average_time += finish - start
         average_time /= ATTEMPT_COUNT
         print(f"Query {QUERIES.index(query) + 1}: {locale.str(round(average_time, 3))} seconds")
         result.write(str(locale.str(round(average_time, 3))) + '\n')
-    
+        
+    cursor.close()
     engine.dispose()
     result.close()
-    
     
 # queries for '4queries' benchmark 
 
