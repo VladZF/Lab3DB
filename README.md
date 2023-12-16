@@ -65,7 +65,7 @@
 |Query 3|5,606|5,578|2,791|0,195|5,641|
 |Query 4|5,885|5,856|5,708|0,212|6,062|
 
-![Tiny set](E:\Projects\lab3_db\pictures\TinySet.png)
+![Tiny set](https://github.com/VladZF/Lab3DB/blob/master/pictures/TinySet.png)
 
 ### Big (2 Gb)
 
@@ -77,7 +77,7 @@
 |Query 3|21,826|59,805|27,87|1,455|58,324|
 |Query 4|60,719|62,599|67,272|1,544|61,265|
 
-![Big set](E:\Projects\lab3_db\pictures\BigSet.png)
+![Big set](https://github.com/VladZF/Lab3DB/blob/master/pictures/BigSet.png)
 
 (Время прописано в секундах).
 
