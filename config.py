@@ -11,7 +11,7 @@ DB_PARAMS = {
 ATTEMPT_COUNT = 20
 
 # path to dataset file (.db for example)
-DATASET = ''
+DATASET = 'E:\\Projects\\lab3_db\\data\\database.db'
 
 # queries for execution
 QUERIES = []
