@@ -7,7 +7,7 @@ locale.setlocale(locale.LC_ALL, "ru_RU")
 
 
 def run():
-    result = open(RESULT_FILE_PATH, 'a')
+    result = open(f"{RESULT_FILE_FOLDER}\\results.txt", 'a')
     url_to_db = f'postgresql://{DB_PARAMS["user"]}:{DB_PARAMS["password"]}@{DB_PARAMS["host"]}:{DB_PARAMS["port"]}/{DB_PARAMS["dbname"]}'
     engine = create_engine(url_to_db)
     cursor = engine.connect()

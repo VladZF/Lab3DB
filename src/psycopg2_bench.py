@@ -7,7 +7,7 @@ locale.setlocale(locale.LC_ALL, "ru_RU")
 
 
 def run():
-   result = open(RESULT_FILE_PATH, 'a')
+   result = open(f"{RESULT_FILE_FOLDER}\\results.txt", 'a')
    connect = psycopg2.connect(**DB_PARAMS)
    cursor = connect.cursor()
    print('Psycopg2 test:')

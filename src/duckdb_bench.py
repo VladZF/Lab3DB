@@ -7,7 +7,7 @@ locale.setlocale(locale.LC_ALL, "ru_RU")
 
 
 def run():
-    result = open(RESULT_FILE_PATH, 'a')
+    result = open(f"{RESULT_FILE_FOLDER}\\results.txt", 'a')
     connect = duckdb.connect(DATASET)
     cursor = connect.cursor()
     print('DuckDB test:')

@@ -1,5 +1,6 @@
 from src import *
 from config import *
+import os
 
 
 launch = {
@@ -10,7 +11,8 @@ launch = {
     'sqlalchemy': sqlalchemy
 }
 
-
+f = open(f'{RESULT_FILE_FOLDER}\\results.txt', 'w')
+f.close()
 
 for lib in LIB.keys():
     if LIB[lib] == True:
