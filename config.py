@@ -16,7 +16,7 @@ DATASET = ''
 # queries for execution
 QUERIES = []
 
-# path to txt file with average query execution times
+# path to folder where will be txt file with average query execution times
 RESULT_FILE_FOLDER = ''
 
 # Library for testing (True - lib launchs for test, False - lib doesn't launch)
