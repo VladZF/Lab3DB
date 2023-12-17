@@ -103,7 +103,7 @@ QUERIES = [
 ||Pandas|Psycopg2|SQLite|DuckDB|SQLAlchemy|
 |Query 1|3,518|3,522|9,539|1,024|3,417|
 |Query 2|4,53|4,578|16,172|1,149|4,434|
-|Query 3|21,826|59,805|27,87|1,455|58,324|
+|Query 3|58,826|59,805|27,87|1,455|58,324|
 |Query 4|60,719|62,599|59,272|1,544|61,265|
 
 ![Big set](https://github.com/VladZF/Lab3DB/blob/master/pictures/BigSet.png)
